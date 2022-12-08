@@ -56,6 +56,11 @@ gpg --export-secret-key -a <KEY_ID or EMAIL> > secret.gpg
 gpg --import public.gpg
 gpg --import secret.gpg
 ```
+Then it's needed to make them trusted:
+```
+gpg --edit-key <KEY_ID or EMAIL>
+trust
+```
 
 ## Regular workflow
 1. Install GPG
